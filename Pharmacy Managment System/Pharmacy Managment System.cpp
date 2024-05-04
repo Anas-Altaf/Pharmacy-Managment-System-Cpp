@@ -420,8 +420,33 @@ void generateBill() {
 		medicines.push_back(make_pair(medicineName, quantity * price));
 	}
 
-	cout << "\n\n";
+	// Save the bill to a file
+	ofstream outFile("bill.txt");
+	if (!outFile.is_open()) {
+		cout << "Error opening file.\n";
+		return;
+	}
 
+	outFile << "--------------------------------------------------\n";
+	outFile << "                     INVOICE                      \n";
+	outFile << "--------------------------------------------------\n";
+	outFile << "Customer Name: " << customerName << endl;
+	outFile << "--------------------------------------------------\n";
+	outFile << setw(20) << left << "Medicine" << setw(10) << right << "Quantity" << setw(15) << right << "Price" << endl;
+	outFile << "--------------------------------------------------\n";
+
+	for (int i = 0; i < medicines.size(); ++i) {
+		outFile << setw(20) << left << medicines[i].first << setw(10) << right << 1 << setw(15) << right << fixed << setprecision(2) << medicines[i].second << endl;
+	}
+
+	outFile << "--------------------------------------------------\n";
+	outFile << setw(30) << left << "Total Amount:" << setw(15) << right << total << endl;
+	outFile << "--------------------------------------------------\n";
+
+	outFile.close();
+
+	// Print the bill on the console
+	cout << "\n\n";
 	cout << "--------------------------------------------------\n";
 	cout << "                     INVOICE                      \n";
 	cout << "--------------------------------------------------\n";
@@ -430,14 +455,15 @@ void generateBill() {
 	cout << setw(20) << left << "Medicine" << setw(10) << right << "Quantity" << setw(15) << right << "Price" << endl;
 	cout << "--------------------------------------------------\n";
 
-	for (const auto& med : medicines) {
-		cout << setw(20) << left << med.first << setw(10) << right << 1 << setw(15) << right << fixed << setprecision(2) << med.second << endl;
+	for (int i = 0; i < medicines.size(); ++i) {
+		cout << setw(20) << left << medicines[i].first << setw(10) << right << 1 << setw(15) << right << fixed << setprecision(2) << medicines[i].second << endl;
 	}
 
 	cout << "--------------------------------------------------\n";
 	cout << setw(30) << left << "Total Amount:" << setw(15) << right << total << endl;
 	cout << "--------------------------------------------------\n";
 }
+
 
 void displayMedicines() {
 	ifstream file("medicines.txt");
