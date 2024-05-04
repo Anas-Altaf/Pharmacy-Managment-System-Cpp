@@ -24,6 +24,7 @@
     <ProjectGuid>{16485eb8-42cb-4477-b57c-d8a9a6675afa}</ProjectGuid>
     <RootNamespace>PahrmacyManamentSystem</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Pharmacy Managment System</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
