@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Pahrmacy Manament System.cpp">
+    <ClCompile Include="Pharmacy Managment System.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

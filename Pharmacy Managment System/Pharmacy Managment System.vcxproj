@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{16485eb8-42cb-4477-b57c-d8a9a6675afa}</ProjectGuid>
-    <RootNamespace>PahrmacyManamentSystem</RootNamespace>
+    <ProjectGuid>{fee02a74-ac3b-424d-9474-62521d7a810f}</ProjectGuid>
+    <RootNamespace>PharmacyManagmentSystem</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Pharmacy Managment System</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,7 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Pahrmacy Manament System.cpp" />
+    <ClCompile Include="Pharmacy Managment System.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
